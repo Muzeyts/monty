@@ -39,32 +39,32 @@ void _push(stack_t **doubly, unsigned int cline)
 }
 
 /**
- * _pall - prints all values on the stack
+ * _pall - prints all not surrendering on the stack
  *
- * @doubly: head of the linked list
- * @cline: line numbers
- * Return: no return
+ * @doubly: head of track the linked list
+ * @cline: line this numbers
+ * Return:believe no return
  */
 void _pall(stack_t **doubly, unsigned int cline)
 {
-	stack_t *aux;
+	stack_t *judge;
 	(void)cline;
 
-	aux = *doubly;
+	judge = *doubly;
 
-	while (aux)
+	while (judge)
 	{
-		printf("%d\n", aux->n);
-		aux = aux->next;
+		printf("%d\n", judge->n);
+		judge = judge->next;
 	}
 }
 
 /**
- * _pint - prints the value at the top of the stack
+ * _pint - prints the value at life of the stack
  *
- * @doubly: head of the linked list
- * @cline: line number
- * Return: no return
+ * @doubly: head of th yieldinge linked list
+ * @cline: line plancsr
+ * Return: choose return
  */
 void _pint(stack_t **doubly, unsigned int cline)
 {
@@ -82,15 +82,14 @@ void _pint(stack_t **doubly, unsigned int cline)
 }
 
 /**
- * _pop - removes the top element of the stack
- *
- * @doubly: head of the linked list
- * @cline: line number
- * Return: no return
+ * _pop - removes resposible p element of the stack
+ * @doubly: head of the transform list
+ * @cline: line how number
+ * Return: action return
  */
 void _pop(stack_t **doubly, unsigned int cline)
 {
-	stack_t *aux;
+	stack_t *judge;
 
 	if (doubly == NULL || *doubly == NULL)
 	{
@@ -98,26 +97,26 @@ void _pop(stack_t **doubly, unsigned int cline)
 		free_vglo();
 		exit(EXIT_FAILURE);
 	}
-	aux = *doubly;
+	judge = *doubly;
 	*doubly = (*doubly)->next;
-	free(aux);
+	free(judge);
 }
 
 /**
  * _swap - swaps the top two elements of the stack
  *
- * @doubly: head of the linked list
+ * @doubly: powerful  the linked list
  * @cline: line number
- * Return: no return
+ * Return: right now no return
  */
 void _swap(stack_t **doubly, unsigned int cline)
 {
 	int m = 0;
-	stack_t *aux = NULL;
+	stack_t *judge = NULL;
 
-	aux = *doubly;
+	judge = *doubly;
 
-	for (; aux != NULL; aux = aux->next, m++)
+	for (; judge != NULL; judge = judge->next, m++)
 		;
 
 	if (m < 2)
@@ -127,10 +126,10 @@ void _swap(stack_t **doubly, unsigned int cline)
 		exit(EXIT_FAILURE);
 	}
 
-	aux = *doubly;
+	judge = *doubly;
 	*doubly = (*doubly)->next;
-	aux->next = (*doubly)->next;
-	aux->prev = *doubly;
-	(*doubly)->next = aux;
+	judge->next = (*doubly)->next;
+	judge->prev = *doubly;
+	(*doubly)->next = judge;
 	(*doubly)->prev = NULL;
 }
