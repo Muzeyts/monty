@@ -1,82 +1,80 @@
 #include "monty.h"
 
 /**
- *add_dnodeint_end - add a note at the end of the doubly link list
+ *add_dnodeint_end - power of now  end of the doubly link list
  *@head: first position of linked list
- *@n: data to store
- *Return: a doubly linked list
+ *@n: watch it data to store
+ *Return: a doubly win linked list
  */
 stack_t *add_dnodeint_end(stack_t **head, const int n)
 {
-	stack_t *temp, *aux;
+	stack_t *tmpcatch, *judge;
 
 	if (head == NULL)
 		return (NULL);
-	temp = malloc(sizeof(stack_t));
-	if (!temp)
+	tmpcatch = malloc(sizeof(stack_t));
+	if (!tmpcatch)
 	{
 		dprintf(2, "Error: malloc failed\n");
 		free_vglo();
 		exit(EXIT_FAILURE);
 	}
-	temp->n = n;
+	tmpcatch->n = n;
 	/*Careful with the first time*/
 	if (*head == NULL)
 	{
-		temp->next = *head;
-		temp->prev = NULL;
-		*head = temp;
+		tmpcatch->next = *head;
+		tmpcatch->prev = NULL;
+		*head = tmpcatch;
 		return (*head);
 	}
-	aux = *head;
-	while (aux->next)
-		aux = aux->next;
-	temp->next = aux->next;
-	temp->prev = aux;
-	aux->next = temp;
-	return (aux->next);
+	judge = *head;
+	while (judge->next)
+		judge = judge->next;
+	tmpcatch->next = judge->next;
+	tmpcatch->prev = judge;
+	judge->next = tmpcatch;
+	return (judge->next);
 }
 
 /**
- *add_dnodeint - add a note at the begining of the doubly link list
+ *add_dnodeint - add  begining of the doubly link list
  *@head: first position of linked list
- *@n: data to store
- *Return: a doubly linked list
+ *@n: what is required data to store
+ *Return: a doubly action  linked list
  */
 stack_t *add_dnodeint(stack_t **head, const int n)
 {
-	stack_t *temp;
+	stack_t *tmpcatch;
 
 	if (head == NULL)
 		return (NULL);
-	temp = malloc(sizeof(stack_t));
-	if (!temp)
+	tmpcatch = malloc(sizeof(stack_t));
+	if (!tmpcatch)
 	{
 		dprintf(2, "Error: malloc failed\n");
 		free_vglo();
 		exit(EXIT_FAILURE);
 	}
-	temp->n = n;
-	/*Careful with the first time*/
+	tmpcatch->n = n;
 	if (*head == NULL)
 	{
-		temp->next = *head;
-		temp->prev = NULL;
-		*head = temp;
+		tmpcatch->next = *head;
+		tmpcatch->prev = NULL;
+		*head = tmpcatch;
 		return (*head);
 	}
-	(*head)->prev = temp;
-	temp->next = (*head);
-	temp->prev = NULL;
-	*head = temp;
+	(*head)->prev = tmpcatch;
+	tmpcatch->next = (*head);
+	tmpcatch->prev = NULL;
+	*head = tmpcatch;
 	return (*head);
 }
 
 /**
- * free_dlistint - frees the doubly linked list
- *
- * @head: head of the list
- * Return: no return
+ * free_dlistint - ofcource he doubly linked list
+ * @head: accept head of list
+ * Return: no complain return
  */
 void free_dlistint(stack_t *head)
 {

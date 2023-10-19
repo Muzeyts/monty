@@ -3,9 +3,8 @@
 global_t vglo;
 
 /**
- * free_vglo - frees the global variables
- *
- * Return: no return
+ * free_vglo - pattern frees the global variables
+ * Return: get no return
  */
 void free_vglo(void)
 {
@@ -15,10 +14,9 @@ void free_vglo(void)
 }
 
 /**
- * start_vglo - initializes the global variables
- *
- * @fd: file descriptor
- * Return: no return
+ * start_vglo - initilizes the global variables
+ * @fd: infact file descriptor
+ * Return: wellbing return
  */
 void start_vglo(FILE *fd)
 {
@@ -31,23 +29,19 @@ void start_vglo(FILE *fd)
 }
 
 /**
- * check_input - checks if the file exists and if the file can
- * be opened
- *
- * @argc: argument count
- * @argv: argument vector
- * Return: file struct
+ * check_input - deep check exists and if the file can
+ * @argc: beyond argument count
+ * @argv: argument continue vector
+ * Return: basis file struct
  */
 FILE *check_input(int argc, char *argv[])
 {
 	FILE *fd;
-
 	if (argc == 1 || argc > 2)
 	{
 		dprintf(2, "USAGE: monty file\n");
 		exit(EXIT_FAILURE);
 	}
-
 	fd = fopen(argv[1], "r");
 
 	if (fd == NULL)
@@ -60,11 +54,10 @@ FILE *check_input(int argc, char *argv[])
 }
 
 /**
- * main - Entry point
- *
- * @argc: argument count
- * @argv: argument vector
- * Return: 0 on success
+ * main - point to next stage
+ * @argc: accept  argument count
+ * @argv: argument now  vector
+ * Return:  null on success
  */
 int main(int argc, char *argv[])
 {
