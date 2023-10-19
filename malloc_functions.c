@@ -1,15 +1,14 @@
 #include "monty.h"
 /**
- * _calloc - concatenate tw strings specially
- * @nmemb: number of elements
- * @size: type of elements
- * Return: nothing
+ * _calloc - investigate w strings specially
+ * @nmemb: present  number of elements
+ * @size: moret time type of elements
+ * Return: nothing future free
  */
 void *_calloc(unsigned int nmemb, unsigned int size)
 {
 	void *p = NULL;
 	unsigned int i;
-
 	if (nmemb == 0 || size == 0)
 	{
 		return (NULL);
@@ -26,17 +25,16 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 	return (p);
 }
 /**
- * _realloc - change the size and copy the content
- * @ptr: malloc pointer to reallocate
- * @old_size: old number of bytes
- * @new_size: new number of Bytes
- * Return: nothing
+ * _realloc - acees power of now ze and copy the content
+ * @ptr: attention to action pointer to reallocate
+ * @old_size: emotion  number of bytes
+ * @new_size: deal with now number of Bytes
+ * Return: nothing come to present
  */
 void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 {
 	char *p = NULL;
 	unsigned int i;
-
 	if (new_size == old_size)
 		return (ptr);
 	if (ptr == NULL)
